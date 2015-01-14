@@ -1,37 +1,24 @@
-# (GitHub-Flavored) Markdown Editor
+# terbilang.js
 
-Basic useful feature list:
+This is Jquery plugin that changed number to text.
 
- * Ctrl/Cmd + S to save the file
- * Drag and drop a file into here to load it
- * File contents are saved in the URL so you can share files
+Language feature list:
+
+ * Indonesia (id - rupiah)
+ * English (en - dollar)
 
 
-I'm no good at writing sample / filler text, so go write something yourself.
-
-Look, a list!
-
- * foo
- * bar
- * baz
+Before added this plugin make sure you are already loaded jquery.
 
 And here's some code!
 
 ```javascript
-$(function(){
-  $('div').html('I am a div.');
-});
+<script src="jquery.js"></script>
+<script src="terbilang.js"></script>
+<script type="text/javascript">
+  $('#input').terbilang({
+    lang: 'in',
+    output: $('#ouput')
+  });
+</script>
 ```
-
-This is [on GitHub](https://github.com/jbt/markdown-editor) so let me know if I've b0rked it somewhere.
-
-
-Props to Mr. Doob and his [code editor](http://mrdoob.com/projects/code-editor/), from which
-the inspiration to this, and some handy implementation hints, came.
-
-### Stuff used to make this:
-
- * [marked](https://github.com/chjj) for Markdown parsing
- * [CodeMirror](http://codemirror.net/) for the awesome syntax-highlighted editor
- * [highlight.js](http://softwaremaniacs.org/soft/highlight/en/) for syntax highlighting in output code blocks
- * [js-deflate](https://github.com/dankogai/js-deflate) for gzipping of data to make it fit in URLs
