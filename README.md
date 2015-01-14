@@ -13,7 +13,7 @@ Before added this plugin make sure you are already loaded jquery.
 And here's some code!
 
 ```javascript
-<script src="jquery.js"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="terbilang.js"></script>
 <script type="text/javascript">
   $('#input').terbilang({
