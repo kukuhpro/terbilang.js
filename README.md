@@ -17,7 +17,7 @@ And here's some code!
 <script src="terbilang.js"></script>
 <script type="text/javascript">
   $('#input').terbilang({
-    lang: 'in',
+    lang: 'id',
     output: $('#ouput')
   });
 </script>
