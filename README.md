@@ -25,12 +25,12 @@ And here's some code!
 Sample Input
 
 ```html
-<input type="text" value="120000" id="input">
+120000
 ```
 
 Sample Output 
 
 ```html
-<input type="text" value="" id="output">
+Rp. 120.000,-
 ```
 
