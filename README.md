@@ -22,3 +22,15 @@ And here's some code!
   });
 </script>
 ```
+Sample Input
+
+```html
+<input type="text" value="120000" id="input">
+```
+
+Sample Output 
+
+```html
+<input type="text" value="" id="output">
+```
+
