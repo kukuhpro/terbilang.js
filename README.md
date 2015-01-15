@@ -23,3 +23,14 @@ And here's some code!
 </script>
 ```
 
+sample input
+
+```html
+200000
+```
+
+sample output
+
+```html
+dua ratus ribu rupiah
+```
