@@ -22,15 +22,4 @@ And here's some code!
   });
 </script>
 ```
-Sample Input
-
-```html
-120000
-```
-
-Sample Output 
-
-```html
-Rp. 120.000,-
-```
 
