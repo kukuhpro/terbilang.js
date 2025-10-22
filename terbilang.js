@@ -113,11 +113,15 @@
        do {
         var groupNumbers = Math.round(((Math.floor(x)/1000)-Math.floor((Math.floor(x)/1000)))*1000);
         if (lang=='id') {
-          s=IDreadThousand(groupNumbers,i,snum,thousandDesc)+thousandDesc[i]+' '+s;
+          if (groupNumbers > 0) {
+            s=IDreadThousand(groupNumbers,i,snum,thousandDesc)+thousandDesc[i]+' '+s;
+          }
           if (x==0) {s='nol'};
         }
         if (lang=='en') {
-          s=ENreadThousand(groupNumbers,snum,thousandDesc,steens,stens)+thousandDesc[i]+' '+s;
+          if (groupNumbers > 0) {
+            s=ENreadThousand(groupNumbers,snum,thousandDesc,steens,stens)+thousandDesc[i]+' '+s;
+          }
           if (x==0) {s='zero'};
         }
         x=Math.floor(Math.floor(x)/1000);

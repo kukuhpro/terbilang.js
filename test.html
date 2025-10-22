@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test terbilang.js</title>
+</head>
+<body>
+  <h2>Test Cases</h2>
+  <div id="results"></div>
+
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="terbilang.js"></script>
+  <script type="text/javascript">
+    // Test the function directly by calling the internal logic
+    var testCases = [
+      {input: '1000000', expected: 'satu juta rupiah'},
+      {input: '1000000000', expected: 'satu miliar rupiah'},
+      {input: '200000', expected: 'dua ratus ribu rupiah'},
+      {input: '1500000', expected: 'satu juta lima ratus ribu rupiah'}
+    ];
+
+    var resultsHtml = '<ul>';
+    testCases.forEach(function(test) {
+      // Create temporary elements
+      var input = $('<input type="text" id="test-input-' + Math.random() + '">').val(test.input);
+      var output = $('<input type="text">');
+
+      $('body').append(input);
+
+      // Initialize plugin
+      input.terbilang({
+        lang: 'id',
+        output: output
+      });
+
+      // Trigger the conversion
+      input.trigger('keyup');
+
+      var result = output.val();
+      var passed = result === test.expected;
+
+      resultsHtml += '<li style="color: ' + (passed ? 'green' : 'red') + '">';
+      resultsHtml += 'Input: ' + test.input + '<br>';
+      resultsHtml += 'Expected: ' + test.expected + '<br>';
+      resultsHtml += 'Got: ' + result + '<br>';
+      resultsHtml += '<strong>' + (passed ? 'PASS' : 'FAIL') + '</strong>';
+      resultsHtml += '</li><br>';
+
+      // Clean up
+      input.remove();
+    });
+    resultsHtml += '</ul>';
+
+    $('#results').html(resultsHtml);
+  </script>
+</body>
+</html>
